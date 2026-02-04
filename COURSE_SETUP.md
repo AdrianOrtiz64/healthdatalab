@@ -101,11 +101,18 @@ Deberías ver algo como:
 - `origin` → fork del grupo
 - `upstream` → repo del curso
 
-Si no ves `upstream`, lo agregas **una sola vez**:
+Si no ves `upstream` u `origin`, lo agregas **una sola vez**:
 
 ```bash
 git remote add upstream URL_DEL_REPO_DEL_CURSO
 ```
+
+```bash
+git remote set-url origin URL_DEL_FORK_DEL_GRUPO
+```
+
+> [!IMPORTANT]
+> **URL_DEL_FORK_DEL_GRUPO debe ser a la base del repositorio. No a un branch.**
 
 ---
 
