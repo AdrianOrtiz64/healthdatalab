@@ -1,0 +1,108 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "3",
+        "gender": "female",
+        "birthDate": "1992-11-23"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "4",
+        "status": "finished",
+        "subject": {
+          "reference": "Patient/3"
+        },
+        "actualPeriod": {
+          "start": "2101-07-11T13:00:00Z",
+          "end": "2101-07-14T11:00:00Z"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "9",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2524-7",
+              "display": "Lactate [Moles/volume] in Blood"
+            }
+          ],
+          "text": "Lactate"
+        },
+        "subject": {
+          "reference": "Patient/2"
+        },
+        "encounter": {
+          "reference": "Encounter/3"
+        },
+        "effectiveDateTime": "2101-03-21T06:30:00Z",
+        "valueQuantity": {
+          "value": 3.8,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "10",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "Leukocytes [#/volume] in Blood"
+            }
+          ],
+          "text": "White Blood Cells"
+        },
+        "subject": {
+          "reference": "Patient/2"
+        },
+        "encounter": {
+          "reference": "Encounter/3"
+        },
+        "effectiveDateTime": "2101-03-21T06:30:00Z",
+        "valueQuantity": {
+          "value": 18.4,
+          "unit": "10^9/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "10^9/L"
+        }
+      }
+    }
+  ]
+}
