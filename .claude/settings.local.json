@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls \"c:\\\\Users\\\\IT\\\\OneDrive\\\\1. PROJECTS\\\\4. UVG - Análisis de Datos Biomédicos\\\\0. HealthDataLab \\(Github Repo\\)\\\\labs\\\\lab-3-interoperability\"\")",
+      "Bash(ls '/c/Users/IT/OneDrive/1. PROJECTS/4. UVG - Análisis de Datos Biomédicos/0. HealthDataLab \\(Github Repo\\)/labs/')",
+      "Bash(ls '/c/Users/IT/OneDrive/1. PROJECTS/4. UVG - Análisis de Datos Biomédicos/0. HealthDataLab \\(Github Repo\\)/labs/lab-3-interoperability/')",
+      "Bash(find '/c/Users/IT/OneDrive/1. PROJECTS/4. UVG - Análisis de Datos Biomédicos/0. HealthDataLab \\(Github Repo\\)/labs/lab-3-interoperability/' -type f)",
+      "Bash(java -version)",
+      "Bash(python3 -c \":*)",
+      "Bash(head -c 100000 \"C:\\\\Users\\\\IT\\\\OneDrive\\\\1. PROJECTS\\\\4. UVG - Análisis de Datos Biomédicos\\\\0. HealthDataLab \\(Github Repo\\)\\\\labs\\\\lab-3-interoperability\\\\notebooks\\\\Lab03_Interoperabilidad_FHIR.ipynb\")",
+      "Bash(powershell.exe -Command \"java -version\")",
+      "Bash(powershell.exe -Command \"Get-Command java -ErrorAction SilentlyContinue; ls ''C:\\\\Program Files\\\\Java'' -ErrorAction SilentlyContinue; ls ''C:\\\\Program Files\\\\Eclipse Adoptium'' -ErrorAction SilentlyContinue; ls ''C:\\\\Program Files\\\\Microsoft'' -ErrorAction SilentlyContinue | Select-String -Pattern ''jdk|java'' -ErrorAction SilentlyContinue\")",
+      "Bash(powershell.exe -Command \"ls ''C:\\\\Program Files'' | Where-Object { $_.Name -match ''java|jdk|jre|eclipse|adoptium|corretto|zulu|microsoft'' } -ErrorAction SilentlyContinue\")",
+      "Bash(cmd.exe /c \"where java 2>&1 || echo Java not found in PATH\")",
+      "Bash(cmd.exe /c \"dir /b /s \"\"C:\\\\Program Files\\\\*java*\"\" 2>&1\")",
+      "Bash(docker --version)",
+      "Bash(TaskStop bxctg3me2)",
+      "Bash(cmd.exe /c \"set JAVA_HOME 2>&1 & echo ---JAVA_HOME_END--- & for /f %i in \\(''where /r C:\\\\ java.exe 2^>nul ^| head -5''\\) do echo %i\")",
+      "Bash(cmd.exe /c \"set JAVA_HOME\")",
+      "Bash(JAVA_EXE='/c/Users/IT/OneDrive - HOSPITAL INTEGRA/Administracion Integra/PROYECTOS/Local 101/Visor Planmeca/Visor/data/jre_x64/bin/java.exe')",
+      "Bash(\"$JAVA_EXE\" -version)",
+      "Bash(cmd.exe /c \"start \"\"\"\" \"\"C:\\\\Program Files\\\\Docker\\\\Docker\\\\Docker Desktop.exe\"\"\")",
+      "Bash(docker info)",
+      "Bash(find '/c/Users/IT/OneDrive/1. PROJECTS/4. UVG - Análisis de Datos Biomédicos/0. HealthDataLab \\(Github Repo\\)/labs/lab-3.1-synthetic-data' -type f)",
+      "Bash(python3.12 -c \":*)",
+      "Bash(NBPATH=\"C:/Users/IT/OneDrive/1. PROJECTS/4. UVG - Análisis de Datos Biomédicos/0. HealthDataLab \\(Github Repo\\)/labs/lab-3.1-synthetic-data/notebooks/Lab031_Datos_Sinteticos_Synthea.ipynb\")",
+      "Bash(SYNTHEA_WIN=\"C:\\\\Users\\\\IT\\\\OneDrive\\\\1. PROJECTS\\\\4. UVG - Análisis de Datos Biomédicos\\\\synthea\")",
+      "Bash(GRADLE_CACHE=\"C:\\\\Users\\\\IT\\\\.gradle_docker_cache\")",
+      "Bash(__NEW_LINE_589cbd3c9e0ba4b0__ docker run --rm -v \"$SYNTHEA_WIN:/synthea\" -v \"$GRADLE_CACHE:/root/.gradle\" -w \"/synthea\" gradle:8-jdk17 bash -c \"./gradlew run -Params=\"\"[''-s'',''42'',''-p'',''100'',''--exporter.csv.export=true'',''--exporter.fhir.export=true'',''Massachusetts'']\"\" 2>&1 | tail -20\")",
+      "Bash(echo \"EXIT CODE: $?\")",
+      "Bash(__NEW_LINE_d406dc8c81fd17df__ MSYS_NO_PATHCONV=1 docker run --rm -v \"$SYNTHEA_WIN:/synthea\" -v \"$GRADLE_CACHE:/root/.gradle\" --workdir //synthea gradle:8-jdk17 bash -c \"./gradlew run -Params=\"\"[''-s'',''42'',''-p'',''100'',''--exporter.csv.export=true'',''--exporter.fhir.export=true'',''Massachusetts'']\"\" 2>&1 | tail -20\")",
+      "Bash(__NEW_LINE_58862722ab3d7db2__ MSYS_NO_PATHCONV=1 docker run --rm -v \"$SYNTHEA_WIN://synthea\" -v \"$GRADLE_CACHE://root/.gradle\" --workdir //synthea gradle:8-jdk17 bash -c \"chmod +x gradlew && bash gradlew run -Params=\"\"[''-s'',''42'',''-p'',''100'',''--exporter.csv.export=true'',''--exporter.fhir.export=true'',''Massachusetts'']\"\" 2>&1 | tail -30\")",
+      "Bash(__NEW_LINE_a8fdc77dd8b7649f__ MSYS_NO_PATHCONV=1 docker run --rm -v \"$SYNTHEA_WIN://synthea\" -v \"$GRADLE_CACHE://root/.gradle\" --workdir //synthea gradle:8-jdk17 bash -c \"sed -i ''s/\\\\r//'' gradlew && chmod +x gradlew && ./gradlew run -Params=\"\"[''-s'',''42'',''-p'',''100'',''--exporter.csv.export=true'',''--exporter.fhir.export=true'',''Massachusetts'']\"\" 2>&1 | tail -30\")",
+      "Bash(docker ps --format \"table {{.ID}}\\\\t{{.Image}}\\\\t{{.Status}}\\\\t{{.Names}}\")",
+      "Bash(SYNTHEA_FHIR=\"C:/Users/IT/OneDrive/1. PROJECTS/4. UVG - Análisis de Datos Biomédicos/synthea/output/fhir\")",
+      "Bash(LAB_FHIR=\"C:/Users/IT/OneDrive/1. PROJECTS/4. UVG - Análisis de Datos Biomédicos/0. HealthDataLab \\(Github Repo\\)/labs/lab-3.1-synthetic-data/fhir\")",
+      "Bash(__NEW_LINE_7b8a84fa41a0d516__ python3.12 -c \":*)",
+      "Bash(cat '/c/Users/IT/OneDrive/1. PROJECTS/4. UVG - Análisis de Datos Biomédicos/0. HealthDataLab \\(Github Repo\\)/.gitignore')"
+    ]
+  }
+}
