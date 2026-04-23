@@ -9,3 +9,11 @@
 # OS junk
 .DS_Store
 Thumbs.db
+
+# Instructor materials — nunca se suben a healthdatalab
+labs/**/instructor/
+labs/**/SPEC.md
+
+# Archivos generados por estudiantes o al ejecutar notebooks
+labs/**/predictions_*.csv
+labs/**/*_executed.ipynb
