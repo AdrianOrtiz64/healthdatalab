@@ -1,0 +1,20 @@
+# Bases de datos regenerables
+db/*.db
+db/*.sqlite
+
+# Procesados intermedios (regenerables desde data/raw/)
+data/processed/
+
+# Notebook ejecutado / HTML render
+notebooks/dashboard.html
+notebooks/*.executed.ipynb
+notebooks/.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# OS
+.DS_Store
+Thumbs.db

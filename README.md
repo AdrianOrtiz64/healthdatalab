@@ -55,7 +55,7 @@ Este repositorio sigue una metodología de **Aprendizaje basado en proyectos e i
 
 - `/labs`: Enunciados y archivos base para las prácticas del curso.
 - `/resources`: Lecturas complementarias de _Fundamentals of Clinical Data Science_ y _Machine Learning in Medicine_.
-- `/project-template`: Estructura sugerida para el producto de datos final (40% de la nota).
+- `/proyecto`: **Ejemplo de referencia** del proyecto integrador Fase 2 (no es plantilla — es inspiración). Pipeline end-to-end con dataset clínico real, notebook tipo dashboard y módulos `.py` testeables. Ver [proyecto/README.md](proyecto/README.md).
 
 ---
 
