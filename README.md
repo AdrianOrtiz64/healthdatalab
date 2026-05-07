@@ -14,10 +14,11 @@ Para "domar la complejidad de los datos de salud", utilizaremos herramientas est
 
 - **Infraestructura:** Docker & Docker Compose (para entornos reproducibles de grado regulatorio).
 - **Base de Datos:** PostgreSQL & SQL (Modelado relacional y OMOP).
-- **Lenguajes:** Python (pandas, numpy, matplotlib, scikit-learn).
-- **Entornos:** Jupyter Notebooks para análisis exploratorio (EDA).
-- **Visualización:** Grafana para dashboards operativos.
-- **Imágenes:** Procesamiento de metadatos y datos DICOM.
+- **Lenguajes:** Python (pandas, numpy, matplotlib, seaborn, scikit-learn, statsmodels).
+- **Entornos:** Jupyter Notebooks para análisis exploratorio (EDA) y modelado.
+- **Interoperabilidad:** FHIR R4, terminologías clínicas (ICD-10, SNOMED CT, LOINC).
+- **Datos sintéticos:** Synthea para cohortes simuladas.
+- **Imágenes:** pydicom para metadatos y datos DICOM.
 
 ---
 
@@ -25,56 +26,55 @@ Para "domar la complejidad de los datos de salud", utilizaremos herramientas est
 
 Los laboratorios están diseñados para construir, pieza a pieza, las capacidades necesarias para el proyecto final.
 
-| Lab      | Título                        | Competencia              | Herramienta Clave          |
-| :------- | :---------------------------- | :----------------------- | :------------------------- |
-| **L0**   | **Setup del Entorno**         | Gobernanza               | Docker + Git               |
-| **L1**   | **Captura en el EHR**         | Modelos de Datos         | PostgreSQL (Mini-MIMIC)    |
-| **L1.1** | **Veracidad de los datos**    | Auditoría de Calidad     | PostgreSQL                 |
-| **L2**   | **Terminología y Semántica**  | Estándares Clínicos      | ICD-10, SNOMED CT, LOINC   |
-| **L3**   | **Interoperabilidad FHIR**    | Interoperabilidad        | FHIR R4, Python            |
-| **L3.1** | **Datos Sintéticos**          | Datos Sintéticos en Salud| Synthea, Python            |
-| **L4**   | **Curación de Datos RWD**     | Preparación              | Python + Pandas            |
-| **L5**   | **EDA Clínico**               | Estadística clínica      | Seaborn + Matplotlib       |
-| **L6**   | **Modelado Estadístico**      | Modelado estadístico     | Statsmodels + Scikit-learn |
-| **L7**   | **Imágenes como Datos**       | Imágenes y señales       | DICOM + Matplotlib         |
-| **L8**   | **Predicción Clínica**        | Machine Learning         | Scikit-learn               |
-| **L9**   | **Visual Analytics**          | Toma de Decisiones       | Grafana Dashboard          |
+| Lab      | Título                                          | Competencia               | Herramienta Clave             |
+| :------- | :---------------------------------------------- | :------------------------ | :---------------------------- |
+| **L0**   | **Setup Reproducible**                          | Gobernanza                | Docker + Postgres + Jupyter   |
+| **L1**   | **Captura en el EHR y Modelos de Datos**        | Modelos de Datos          | PostgreSQL (Mini-MIMIC)       |
+| **L1.1** | **Veracidad y Missing Values**                  | Auditoría de Calidad      | PostgreSQL                    |
+| **L2**   | **Terminología y Semántica**                    | Estándares Clínicos       | ICD-10, SNOMED CT, LOINC      |
+| **L3**   | **Interoperabilidad: De SQL a FHIR**            | Interoperabilidad         | FHIR R4, Python               |
+| **L3.1** | **Datos Sintéticos con Synthea**                | Datos Sintéticos en Salud | Synthea, Python               |
+| **L4**   | **Modelado Estadístico**                        | Modelado estadístico      | Statsmodels + Scikit-learn    |
+| **L5**   | **Exploración de Imágenes Médicas con DICOM**   | Imágenes y señales        | pydicom + Matplotlib          |
+| **L6**   | **Machine Learning Supervisado**                | Machine Learning          | Scikit-learn                  |
+
+> Próximos laboratorios del ciclo se agregarán a [labs/](labs/) conforme avance el curso. Cada lab vive en su propia carpeta con `README.md`, `docker-compose.yml`, `requirements.txt` y `notebooks/`.
 
 ---
 
 ## 📈 Metodología de Trabajo
 
-Este repositorio sigue una metodología de **Aprendizaje basado en proyectos e investigación**:
+Este repositorio sigue una metodología de **aprendizaje basado en proyectos**:
 
-1.  **Exploración (Issues):** Identificación de problemas de calidad de datos y discrepancias semánticas.
-2.  **Discusión (Discussions):** Debate sobre dilemas éticos, privacidad (GDPR/HIPAA) y gobernanza.
-3.  **Colaboración (Pull Requests):** Entrega de laboratorios mediante revisiones de código cruzadas para asegurar la **reproducibilidad**.
-4.  **Wiki:**
+1. **Exploración (Issues):** Identificación de problemas de calidad de datos y discrepancias semánticas.
+2. **Discusión (Discussions):** Debate sobre dilemas éticos, privacidad (GDPR/HIPAA) y gobernanza.
+3. **Colaboración (Pull Requests):** Entrega de laboratorios mediante revisiones de código cruzadas para asegurar la **reproducibilidad**.
 
 ## 📂 Estructura del Repositorio
 
-- `/labs`: Enunciados y archivos base para las prácticas del curso.
-- `/resources`: Lecturas complementarias de _Fundamentals of Clinical Data Science_ y _Machine Learning in Medicine_.
-- `/proyecto`: **Ejemplo de referencia** del proyecto integrador Fase 2 (no es plantilla — es inspiración). Pipeline end-to-end con dataset clínico real, notebook tipo dashboard y módulos `.py` testeables. Ver [proyecto/README.md](proyecto/README.md).
+- [`labs/`](labs/) — Enunciados y archivos base de los laboratorios. Una carpeta por lab.
+- [`proyecto/`](proyecto/) — **Ejemplo de referencia** del proyecto integrador Fase 2 (inspiración, no plantilla). Pipeline end-to-end con dataset clínico real, notebook tipo dashboard y módulos `.py` testeables. Ver [proyecto/README.md](proyecto/README.md).
+- [`COURSE_SETUP.md`](COURSE_SETUP.md) — Flujo de trabajo con GitHub para grupos: forks, branches, pull requests. **Léelo antes del primer lab.**
 
 ---
 
-## Reglas
+## 🔑 Reglas del flujo de trabajo
 
-- Nunca trabajar en main
-- Una rama por lab: labXX/grupo-YY
-- Solo editar tu carpeta submissions/grupo-YY
-- Entrega = PR a main
+- **Nunca trabajar en `main`.** Cada lab vive en su propio branch.
+- **Un fork por grupo, un branch por lab, un PR por entrega** (`labX-nombre/grupo-N`).
+- **El PR es la entrega oficial.** No se hace merge — el profesor revisa y califica.
+
+Detalles completos en [COURSE_SETUP.md](COURSE_SETUP.md).
 
 ---
 
 ## 📚 Bibliografía Guía
 
-- **Nguyen, A.** (2022). _Hands-On Healthcare Data_. O’Reilly Media..
-- **Kubben, P., et al.** (2019). _Fundamentals of Clinical Data Science_. Springer..
-- **Cleophas, T. J., & Zwinderman, A. H.** (2015). _Machine Learning in Medicine_. Springer..
+- **Nguyen, A.** (2022). _Hands-On Healthcare Data_. O'Reilly Media.
+- **Kubben, P., et al.** (2019). _Fundamentals of Clinical Data Science_. Springer.
+- **Cleophas, T. J., & Zwinderman, A. H.** (2015). _Machine Learning in Medicine_. Springer.
 
 ---
 
-**Docente:** M.Sc. Miguel Godoy – [mgodoy@uvg.edu.gt](mailto:mgodoy@uvg.edu.gt).
-**UVG - 2026** | _Espacio de exploración y creación en conjunto_.
+**Docente:** M.Sc. Miguel Godoy — [mgodoy@uvg.edu.gt](mailto:mgodoy@uvg.edu.gt)
+**UVG · 2026** | _Espacio de exploración y creación en conjunto._
